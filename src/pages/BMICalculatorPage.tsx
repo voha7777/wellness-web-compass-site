@@ -179,7 +179,7 @@ const BMICalculatorPage = () => {
                     <div className="space-y-3">
                       <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
                         <span className="font-medium">Underweight</span>
-                        <span className="text-blue-600">< 18.5</span>
+                        <span className="text-blue-600">&lt; 18.5</span>
                       </div>
                       <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg">
                         <span className="font-medium">Normal weight</span>
@@ -191,7 +191,7 @@ const BMICalculatorPage = () => {
                       </div>
                       <div className="flex justify-between items-center p-3 bg-red-50 rounded-lg">
                         <span className="font-medium">Obese</span>
-                        <span className="text-red-600">≥ 30</span>
+                        <span className="text-red-600">&ge; 30</span>
                       </div>
                     </div>
                   </CardContent>

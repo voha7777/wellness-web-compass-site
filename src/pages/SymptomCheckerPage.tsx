@@ -279,7 +279,7 @@ const SymptomCheckerPage = () => {
                       <div className="p-3 bg-yellow-50 rounded-lg">
                         <h4 className="font-semibold text-yellow-800 mb-2">Urgent Care</h4>
                         <ul className="text-sm text-yellow-700 space-y-1">
-                          <li>• High fever (>101°F)</li>
+                          <li>• High fever ({'>'}101°F)</li>
                           <li>• Persistent vomiting</li>
                           <li>• Severe pain</li>
                           <li>• Dehydration</li>
