@@ -11,77 +11,77 @@ import { Badge } from "@/components/ui/badge";
 const MedicationsPage = () => {
   const categories = [
     {
-      name: "Обезболивающие",
+      name: "Pain Relief",
       count: 45,
-      description: "Препараты для снятия боли",
+      description: "Medications for pain management",
       color: "bg-blue-50 text-blue-700"
     },
     {
-      name: "Антибиотики",
+      name: "Antibiotics",
       count: 67,
-      description: "Противомикробные средства",
+      description: "Anti-bacterial medications",
       color: "bg-green-50 text-green-700"
     },
     {
-      name: "Витамины и БАДы",
+      name: "Vitamins & Supplements",
       count: 123,
-      description: "Биологически активные добавки",
+      description: "Nutritional supplements",
       color: "bg-yellow-50 text-yellow-700"
     },
     {
-      name: "Сердечно-сосудистые",
+      name: "Cardiovascular",
       count: 89,
-      description: "Препараты для сердца и сосудов",
+      description: "Heart and blood vessel medications",
       color: "bg-red-50 text-red-700"
     }
   ];
 
   const popularMedications = [
     {
-      name: "Лизиноприл",
+      name: "Lisinopril",
       genericName: "Lisinopril",
-      category: "Ингибиторы АПФ",
-      indication: "Артериальная гипертензия",
+      category: "ACE Inhibitors",
+      indication: "High Blood Pressure",
       prescriptionRequired: true,
       slug: "lisinopril"
     },
     {
-      name: "Аторвастатин",
+      name: "Atorvastatin",
       genericName: "Atorvastatin",
-      category: "Статины",
-      indication: "Высокий холестерин",
+      category: "Statins",
+      indication: "High Cholesterol",
       prescriptionRequired: true,
       slug: "atorvastatin"
     },
     {
-      name: "Метформин",
+      name: "Metformin",
       genericName: "Metformin",
-      category: "Противодиабетические",
-      indication: "Сахарный диабет 2 типа",
+      category: "Antidiabetic",
+      indication: "Type 2 Diabetes",
       prescriptionRequired: true,
       slug: "metformin"
     },
     {
-      name: "Ибупрофен",
+      name: "Ibuprofen",
       genericName: "Ibuprofen",
-      category: "НПВС",
-      indication: "Боль и воспаление",
+      category: "NSAIDs",
+      indication: "Pain and Inflammation",
       prescriptionRequired: false,
       slug: "ibuprofen"
     },
     {
-      name: "Омепразол",
+      name: "Omeprazole",
       genericName: "Omeprazole",
-      category: "Ингибиторы протонной помпы",
-      indication: "Изжога, язвенная болезнь",
+      category: "Proton Pump Inhibitors",
+      indication: "Heartburn, Ulcers",
       prescriptionRequired: false,
       slug: "omeprazole"
     },
     {
-      name: "Сальбутамол",
+      name: "Salbutamol",
       genericName: "Salbutamol",
-      category: "Бронходилататоры",
-      indication: "Астма, ХОБЛ",
+      category: "Bronchodilators",
+      indication: "Asthma, COPD",
       prescriptionRequired: true,
       slug: "salbutamol"
     }
@@ -96,9 +96,9 @@ const MedicationsPage = () => {
         <section className="bg-gradient-to-r from-health-600 to-health-700 text-white py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl font-bold mb-6">Лекарственные препараты</h1>
+              <h1 className="text-4xl font-bold mb-6">Medications & Drugs</h1>
               <p className="text-xl mb-8 opacity-90">
-                Полная база данных лекарственных средств с описанием, дозировками и взаимодействиями
+                Complete database of medications with descriptions, dosages, and interactions
               </p>
               
               {/* Search */}
@@ -107,11 +107,11 @@ const MedicationsPage = () => {
                   <Pill className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
                   <Input
                     type="search"
-                    placeholder="Поиск лекарств по названию или действующему веществу..."
+                    placeholder="Search medications by name or active ingredient..."
                     className="pl-12 pr-4 py-3 text-gray-900 bg-white border-0 focus-visible:ring-2 focus-visible:ring-white"
                   />
                   <Button className="absolute right-2 top-1/2 -translate-y-1/2 bg-health-600 hover:bg-health-700">
-                    Найти
+                    Search
                   </Button>
                 </div>
               </div>
@@ -125,8 +125,8 @@ const MedicationsPage = () => {
             <div className="flex items-start gap-3 max-w-4xl mx-auto">
               <AlertTriangle className="h-5 w-5 text-yellow-600 mt-0.5 flex-shrink-0" />
               <div className="text-sm text-yellow-800">
-                <strong>Важно:</strong> Информация предоставлена в ознакомительных целях. 
-                Перед применением любых лекарственных средств обязательно проконсультируйтесь с врачом или фармацевтом.
+                <strong>Important:</strong> This information is for educational purposes only. 
+                Always consult with a healthcare professional before taking any medication.
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@ const MedicationsPage = () => {
         {/* Categories */}
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold mb-8">Категории лекарственных средств</h2>
+            <h2 className="text-2xl font-bold mb-8">Drug Categories</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {categories.map((category, index) => (
@@ -146,7 +146,7 @@ const MedicationsPage = () => {
                   </CardHeader>
                   <CardContent>
                     <div className={`${category.color} px-3 py-1 rounded-full text-sm font-medium w-fit`}>
-                      {category.count} препаратов
+                      {category.count} medications
                     </div>
                   </CardContent>
                 </Card>
@@ -159,15 +159,15 @@ const MedicationsPage = () => {
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between mb-8">
-              <h2 className="text-2xl font-bold">Популярные лекарственные препараты</h2>
+              <h2 className="text-2xl font-bold">Popular Medications</h2>
               <div className="flex gap-2">
                 <Button variant="outline" size="sm">
                   <Filter className="h-4 w-4 mr-2" />
-                  Фильтры
+                  Filters
                 </Button>
                 <Link to="/medications/index">
                   <Button variant="outline" size="sm">
-                    Алфавитный указатель
+                    A-Z Index
                   </Button>
                 </Link>
               </div>
@@ -185,9 +185,9 @@ const MedicationsPage = () => {
                         </div>
                         <div className="flex items-center gap-1">
                           {medication.prescriptionRequired ? (
-                            <Badge variant="destructive" className="text-xs">Рецептурный</Badge>
+                            <Badge variant="destructive" className="text-xs">Prescription</Badge>
                           ) : (
-                            <Badge variant="secondary" className="text-xs">Безрецептурный</Badge>
+                            <Badge variant="secondary" className="text-xs">Over-the-counter</Badge>
                           )}
                         </div>
                       </div>
@@ -195,15 +195,15 @@ const MedicationsPage = () => {
                     <CardContent>
                       <div className="space-y-2">
                         <div>
-                          <span className="text-sm font-medium text-gray-700">Категория: </span>
+                          <span className="text-sm font-medium text-gray-700">Category: </span>
                           <span className="text-sm text-gray-600">{medication.category}</span>
                         </div>
                         <div>
-                          <span className="text-sm font-medium text-gray-700">Показания: </span>
+                          <span className="text-sm font-medium text-gray-700">Used for: </span>
                           <span className="text-sm text-gray-600">{medication.indication}</span>
                         </div>
                         <div className="mt-4 flex items-center text-health-600 text-sm font-medium">
-                          Подробная информация
+                          View details
                           <ChevronRight className="h-4 w-4 ml-1" />
                         </div>
                       </div>
@@ -218,22 +218,22 @@ const MedicationsPage = () => {
         {/* Tools Section */}
         <section className="py-8 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h3 className="text-xl font-semibold mb-6 text-center">Полезные инструменты</h3>
+            <h3 className="text-xl font-semibold mb-6 text-center">Useful Tools</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <Link to="/tools/drug-interactions" className="text-center p-6 bg-white rounded-lg hover:shadow-md transition-shadow">
                 <AlertTriangle className="h-8 w-8 text-health-600 mx-auto mb-3" />
-                <div className="font-medium text-gray-900 mb-2">Проверка взаимодействий</div>
-                <div className="text-sm text-gray-600">Проверьте совместимость лекарств</div>
+                <div className="font-medium text-gray-900 mb-2">Drug Interactions</div>
+                <div className="text-sm text-gray-600">Check drug compatibility</div>
               </Link>
               <Link to="/medications/dosage-calculator" className="text-center p-6 bg-white rounded-lg hover:shadow-md transition-shadow">
                 <Info className="h-8 w-8 text-health-600 mx-auto mb-3" />
-                <div className="font-medium text-gray-900 mb-2">Калькулятор дозировок</div>
-                <div className="text-sm text-gray-600">Рассчитайте правильную дозу</div>
+                <div className="font-medium text-gray-900 mb-2">Dosage Calculator</div>
+                <div className="text-sm text-gray-600">Calculate proper dosage</div>
               </Link>
               <Link to="/medications/side-effects" className="text-center p-6 bg-white rounded-lg hover:shadow-md transition-shadow">
                 <AlertTriangle className="h-8 w-8 text-health-600 mx-auto mb-3" />
-                <div className="font-medium text-gray-900 mb-2">Побочные эффекты</div>
-                <div className="text-sm text-gray-600">Узнайте о возможных реакциях</div>
+                <div className="font-medium text-gray-900 mb-2">Side Effects</div>
+                <div className="text-sm text-gray-600">Learn about possible reactions</div>
               </Link>
             </div>
           </div>

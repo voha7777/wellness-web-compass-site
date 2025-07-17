@@ -10,34 +10,34 @@ import { Badge } from "@/components/ui/badge";
 const ArticlesPage = () => {
   const featuredArticles = [
     {
-      title: "10 способов улучшить здоровье сердца",
-      excerpt: "Простые изменения в образе жизни, которые могут значительно снизить риск сердечно-сосудистых заболеваний",
-      category: "Кардиология",
-      author: "Д-р Иванова А.С.",
-      date: "15 января 2024",
-      readTime: "7 мин",
+      title: "10 Ways to Improve Your Heart Health",
+      excerpt: "Simple lifestyle changes that can significantly reduce your risk of cardiovascular disease",
+      category: "Cardiology",
+      author: "Dr. Sarah Johnson",
+      date: "January 15, 2024",
+      readTime: "7 min",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "improve-heart-health",
       trending: true
     },
     {
-      title: "Сахарный диабет: современные методы лечения",
-      excerpt: "Обзор новейших подходов к лечению диабета 2 типа, включая инновационные препараты и технологии",
-      category: "Эндокринология",
-      author: "Д-р Петров В.М.",
-      date: "12 января 2024",
-      readTime: "12 мин",
+      title: "Diabetes: Modern Treatment Approaches",
+      excerpt: "Overview of the latest approaches to treating type 2 diabetes, including innovative medications and technologies",
+      category: "Endocrinology",
+      author: "Dr. Michael Chen",
+      date: "January 12, 2024",
+      readTime: "12 min",
       image: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "diabetes-treatment-2024",
       trending: false
     },
     {
-      title: "Влияние питания на психическое здоровье",
-      excerpt: "Научные исследования о связи между рационом питания и состоянием нервной системы",
-      category: "Психиатрия",
-      author: "Д-р Сидорова М.П.",
-      date: "10 января 2024",
-      readTime: "9 мин",
+      title: "The Impact of Nutrition on Mental Health",
+      excerpt: "Scientific research on the connection between diet and mental health conditions",
+      category: "Psychiatry",
+      author: "Dr. Emma Wilson",
+      date: "January 10, 2024",
+      readTime: "9 min",
       image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "nutrition-mental-health",
       trending: true
@@ -46,19 +46,19 @@ const ArticlesPage = () => {
 
   const categories = [
     {
-      name: "Кардиология",
+      name: "Cardiology",
       icon: <Heart className="h-6 w-6" />,
       articleCount: 245,
       color: "bg-red-50 text-red-700"
     },
     {
-      name: "Питание",
+      name: "Nutrition",
       icon: <Utensils className="h-6 w-6" />,
       articleCount: 189,
       color: "bg-green-50 text-green-700"
     },
     {
-      name: "Фитнес",
+      name: "Fitness",
       icon: <Activity className="h-6 w-6" />,
       articleCount: 156,
       color: "bg-blue-50 text-blue-700"
@@ -67,19 +67,19 @@ const ArticlesPage = () => {
 
   const latestNews = [
     {
-      title: "ВОЗ обновила рекомендации по вакцинации против гриппа",
-      date: "16 января 2024",
-      category: "Новости медицины"
+      title: "WHO Updates Flu Vaccination Guidelines",
+      date: "January 16, 2024",
+      category: "Medical News"
     },
     {
-      title: "Новое исследование о пользе средиземноморской диеты",
-      date: "15 января 2024",
-      category: "Исследования"
+      title: "New Study Shows Benefits of Mediterranean Diet",
+      date: "January 15, 2024",
+      category: "Research"
     },
     {
-      title: "Breakthrough в лечении болезни Альцгеймера",
-      date: "14 января 2024",
-      category: "Неврология"
+      title: "Breakthrough in Alzheimer's Treatment",
+      date: "January 14, 2024",
+      category: "Neurology"
     }
   ];
 
@@ -92,9 +92,9 @@ const ArticlesPage = () => {
         <section className="bg-gradient-to-r from-health-600 to-health-700 text-white py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl font-bold mb-6">Статьи о здоровье</h1>
+              <h1 className="text-4xl font-bold mb-6">Health Articles</h1>
               <p className="text-xl opacity-90">
-                Актуальная медицинская информация от ведущих специалистов
+                Latest medical information from leading healthcare professionals
               </p>
             </div>
           </div>
@@ -104,9 +104,9 @@ const ArticlesPage = () => {
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between mb-8">
-              <h2 className="text-2xl font-bold">Рекомендуемые статьи</h2>
+              <h2 className="text-2xl font-bold">Featured Articles</h2>
               <Button variant="outline" asChild>
-                <Link to="/articles/featured">Все рекомендуемые</Link>
+                <Link to="/articles/featured">All Featured</Link>
               </Button>
             </div>
             
@@ -125,7 +125,7 @@ const ArticlesPage = () => {
                         <div className="absolute top-4 left-4">
                           <Badge className="bg-red-500 text-white flex items-center gap-1">
                             <TrendingUp className="h-3 w-3" />
-                            Популярное
+                            Trending
                           </Badge>
                         </div>
                       )}
@@ -194,7 +194,7 @@ const ArticlesPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Categories */}
               <div className="lg:col-span-2">
-                <h2 className="text-2xl font-bold mb-6">Категории статей</h2>
+                <h2 className="text-2xl font-bold mb-6">Article Categories</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {categories.map((category, index) => (
                     <Link key={index} to={`/articles/category/${category.name.toLowerCase()}`}>
@@ -203,7 +203,7 @@ const ArticlesPage = () => {
                           {category.icon}
                         </div>
                         <h3 className="font-semibold mb-2">{category.name}</h3>
-                        <p className="text-sm text-gray-600">{category.articleCount} статей</p>
+                        <p className="text-sm text-gray-600">{category.articleCount} articles</p>
                       </Card>
                     </Link>
                   ))}
@@ -211,14 +211,14 @@ const ArticlesPage = () => {
                 
                 <div className="mt-8 text-center">
                   <Button asChild variant="outline">
-                    <Link to="/articles/topics">Все категории A-Z</Link>
+                    <Link to="/articles/topics">All Categories A-Z</Link>
                   </Button>
                 </div>
               </div>
 
               {/* Latest News */}
               <div>
-                <h2 className="text-2xl font-bold mb-6">Последние новости</h2>
+                <h2 className="text-2xl font-bold mb-6">Latest News</h2>
                 <Card>
                   <CardContent className="p-0">
                     {latestNews.map((news, index) => (
@@ -236,7 +236,7 @@ const ArticlesPage = () => {
                 </Card>
                 
                 <Button asChild variant="outline" className="w-full mt-4">
-                  <Link to="/articles/news">Все новости</Link>
+                  <Link to="/articles/news">All News</Link>
                 </Button>
               </div>
             </div>
@@ -246,18 +246,18 @@ const ArticlesPage = () => {
         {/* Newsletter Signup */}
         <section className="py-12 bg-health-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl font-bold mb-4">Будьте в курсе новостей медицины</h2>
+            <h2 className="text-2xl font-bold mb-4">Stay Updated on Medical News</h2>
             <p className="mb-8 opacity-90">
-              Подпишитесь на нашу рассылку и получайте еженедельный дайджест лучших статей
+              Subscribe to our newsletter and get weekly digest of the best health articles
             </p>
             <div className="max-w-md mx-auto flex gap-2">
               <input 
                 type="email" 
-                placeholder="Ваш email" 
+                placeholder="Your email" 
                 className="flex-1 px-4 py-2 rounded-lg text-gray-900"
               />
               <Button className="bg-white text-health-600 hover:bg-gray-100">
-                Подписаться
+                Subscribe
               </Button>
             </div>
           </div>
