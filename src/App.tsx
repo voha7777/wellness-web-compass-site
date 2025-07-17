@@ -6,6 +6,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import DiseasesPage from "./pages/DiseasesPage";
+import MedicationsPage from "./pages/MedicationsPage";
+import ArticlesPage from "./pages/ArticlesPage";
+import ToolsPage from "./pages/ToolsPage";
+import HypertensionPage from "./pages/HypertensionPage";
 
 const queryClient = new QueryClient();
 
@@ -19,15 +24,16 @@ const App = () => (
           <Route path="/" element={<Index />} />
           
           {/* Disease & Conditions Routes */}
-          <Route path="/diseases" element={<NotFound />} />
+          <Route path="/diseases" element={<DiseasesPage />} />
           <Route path="/diseases/common" element={<NotFound />} />
           <Route path="/diseases/symptoms" element={<NotFound />} />
           <Route path="/diseases/chronic" element={<NotFound />} />
           <Route path="/diseases/all" element={<NotFound />} />
+          <Route path="/diseases/hypertension" element={<HypertensionPage />} />
           <Route path="/diseases/:diseaseId" element={<NotFound />} />
           
           {/* Medications & Drugs Routes */}
-          <Route path="/medications" element={<NotFound />} />
+          <Route path="/medications" element={<MedicationsPage />} />
           <Route path="/medications/index" element={<NotFound />} />
           <Route path="/medications/prescription" element={<NotFound />} />
           <Route path="/medications/otc" element={<NotFound />} />
@@ -35,7 +41,7 @@ const App = () => (
           <Route path="/medications/:medicationId" element={<NotFound />} />
           
           {/* Articles Routes */}
-          <Route path="/articles" element={<NotFound />} />
+          <Route path="/articles" element={<ArticlesPage />} />
           <Route path="/articles/latest" element={<NotFound />} />
           <Route path="/articles/featured" element={<NotFound />} />
           <Route path="/articles/news" element={<NotFound />} />
@@ -45,7 +51,7 @@ const App = () => (
           {/* Surveys & Tools Routes */}
           <Route path="/surveys" element={<NotFound />} />
           <Route path="/surveys/assessments" element={<NotFound />} />
-          <Route path="/tools" element={<NotFound />} />
+          <Route path="/tools" element={<ToolsPage />} />
           <Route path="/tools/bmi-calculator" element={<NotFound />} />
           <Route path="/tools/symptom-checker" element={<NotFound />} />
           <Route path="/tools/drug-interactions" element={<NotFound />} />
