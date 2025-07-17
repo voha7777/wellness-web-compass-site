@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-200 pt-12 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Logo and About */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
@@ -16,7 +16,7 @@ const Footer = () => {
               <span className="text-xl font-bold text-gray-800">HealthSurvey</span>
             </Link>
             <p className="text-gray-600 mb-4">
-              HealthSurvey.org provides reliable, comprehensive health surveys to help you make informed decisions about your well-being.
+              HealthSurvey.org provides reliable, comprehensive health information, surveys, and resources to help you make informed decisions about your well-being.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-500 hover:text-health-600 transition-colors">
@@ -34,36 +34,47 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation */}
+          {/* Diseases & Conditions */}
           <div>
-            <h3 className="font-semibold text-gray-800 mb-4">Health Surveys</h3>
+            <h3 className="font-semibold text-gray-800 mb-4">Diseases & Conditions</h3>
             <ul className="space-y-2">
-              <li><Link to="/surveys/mental-health" className="text-gray-600 hover:text-health-600 transition-colors">Mental Health</Link></li>
-              <li><Link to="/surveys/fitness" className="text-gray-600 hover:text-health-600 transition-colors">Fitness</Link></li>
-              <li><Link to="/surveys/nutrition" className="text-gray-600 hover:text-health-600 transition-colors">Nutrition</Link></li>
-              <li><Link to="/surveys/sleep" className="text-gray-600 hover:text-health-600 transition-colors">Sleep</Link></li>
-              <li><Link to="/surveys/chronic-conditions" className="text-gray-600 hover:text-health-600 transition-colors">Chronic Conditions</Link></li>
+              <li><Link to="/diseases/common" className="text-gray-600 hover:text-health-600 transition-colors">Common Conditions</Link></li>
+              <li><Link to="/diseases/symptoms" className="text-gray-600 hover:text-health-600 transition-colors">Symptoms</Link></li>
+              <li><Link to="/diseases/chronic" className="text-gray-600 hover:text-health-600 transition-colors">Chronic Diseases</Link></li>
+              <li><Link to="/diseases/all" className="text-gray-600 hover:text-health-600 transition-colors">All Diseases A-Z</Link></li>
             </ul>
           </div>
 
+          {/* Medications & Drugs */}
           <div>
-            <h3 className="font-semibold text-gray-800 mb-4">Resources</h3>
+            <h3 className="font-semibold text-gray-800 mb-4">Medications & Drugs</h3>
             <ul className="space-y-2">
-              <li><Link to="/resources/articles" className="text-gray-600 hover:text-health-600 transition-colors">Articles</Link></li>
-              <li><Link to="/resources/research" className="text-gray-600 hover:text-health-600 transition-colors">Research</Link></li>
-              <li><Link to="/resources/news" className="text-gray-600 hover:text-health-600 transition-colors">Health News</Link></li>
-              <li><Link to="/resources/experts" className="text-gray-600 hover:text-health-600 transition-colors">Expert Opinions</Link></li>
-              <li><Link to="/resources/faq" className="text-gray-600 hover:text-health-600 transition-colors">FAQs</Link></li>
+              <li><Link to="/medications/index" className="text-gray-600 hover:text-health-600 transition-colors">Drug Index A-Z</Link></li>
+              <li><Link to="/medications/prescription" className="text-gray-600 hover:text-health-600 transition-colors">Prescription Drugs</Link></li>
+              <li><Link to="/medications/otc" className="text-gray-600 hover:text-health-600 transition-colors">OTC Medicines</Link></li>
+              <li><Link to="/medications/interactions" className="text-gray-600 hover:text-health-600 transition-colors">Drug Interactions</Link></li>
             </ul>
           </div>
 
+          {/* Health Articles */}
           <div>
-            <h3 className="font-semibold text-gray-800 mb-4">Company</h3>
+            <h3 className="font-semibold text-gray-800 mb-4">Health Articles</h3>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-600 hover:text-health-600 transition-colors">About Us</Link></li>
-              <li><Link to="/team" className="text-gray-600 hover:text-health-600 transition-colors">Our Team</Link></li>
-              <li><Link to="/careers" className="text-gray-600 hover:text-health-600 transition-colors">Careers</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-health-600 transition-colors">Contact Us</Link></li>
+              <li><Link to="/articles/latest" className="text-gray-600 hover:text-health-600 transition-colors">Latest Articles</Link></li>
+              <li><Link to="/articles/featured" className="text-gray-600 hover:text-health-600 transition-colors">Featured Articles</Link></li>
+              <li><Link to="/articles/news" className="text-gray-600 hover:text-health-600 transition-colors">Health News</Link></li>
+              <li><Link to="/articles/topics" className="text-gray-600 hover:text-health-600 transition-colors">Topics A-Z</Link></li>
+            </ul>
+          </div>
+
+          {/* Tools & Resources */}
+          <div>
+            <h3 className="font-semibold text-gray-800 mb-4">Tools & Resources</h3>
+            <ul className="space-y-2">
+              <li><Link to="/surveys/assessments" className="text-gray-600 hover:text-health-600 transition-colors">Health Assessments</Link></li>
+              <li><Link to="/tools/bmi-calculator" className="text-gray-600 hover:text-health-600 transition-colors">BMI Calculator</Link></li>
+              <li><Link to="/tools/symptom-checker" className="text-gray-600 hover:text-health-600 transition-colors">Symptom Checker</Link></li>
+              <li><Link to="/tools/drug-interactions" className="text-gray-600 hover:text-health-600 transition-colors">Drug Interaction Tool</Link></li>
             </ul>
           </div>
         </div>
@@ -73,15 +84,21 @@ const Footer = () => {
             <p className="text-sm text-gray-500 mb-4 md:mb-0">
               © {new Date().getFullYear()} HealthSurvey.org. All rights reserved.
             </p>
-            <div className="flex space-x-6">
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link to="/about" className="text-sm text-gray-500 hover:text-health-600 transition-colors">
+                About Us
+              </Link>
+              <Link to="/contact" className="text-sm text-gray-500 hover:text-health-600 transition-colors">
+                Contact Us
+              </Link>
               <Link to="/privacy" className="text-sm text-gray-500 hover:text-health-600 transition-colors">
                 Privacy Policy
               </Link>
               <Link to="/terms" className="text-sm text-gray-500 hover:text-health-600 transition-colors">
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="text-sm text-gray-500 hover:text-health-600 transition-colors">
-                Cookie Policy
+              <Link to="/accessibility" className="text-sm text-gray-500 hover:text-health-600 transition-colors">
+                Accessibility
               </Link>
             </div>
           </div>
