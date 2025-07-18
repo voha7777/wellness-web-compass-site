@@ -14,6 +14,7 @@ import HypertensionPage from "./pages/HypertensionPage";
 import BMICalculatorPage from "./pages/BMICalculatorPage";
 import SymptomCheckerPage from "./pages/SymptomCheckerPage";
 import DrugInteractionsPage from "./pages/DrugInteractionsPage";
+import NutritionPage from "./pages/NutritionPage";
 
 const queryClient = new QueryClient();
 
@@ -71,6 +72,10 @@ const App = () => (
           {/* Health Topics Routes */}
           <Route path="/topics" element={<NotFound />} />
           <Route path="/topics/:topicId" element={<NotFound />} />
+          
+          {/* Nutrition Routes */}
+          <Route path="/nutrition" element={<NutritionPage />} />
+          <Route path="/nutrition/:topicId" element={<NotFound />} />
           
           {/* About/Contact Routes */}
           <Route path="/about" element={<NotFound />} />

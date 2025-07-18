@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Search, Filter, ChevronRight, Heart, Brain, Thermometer, Stethoscope, Lungs, Stomach, Bone, Eye } from "lucide-react";
+import { Search, Filter, ChevronRight, Heart, Brain, Thermometer, Stethoscope, Activity, Zap, Bone, Eye } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -30,7 +30,7 @@ const DiseasesPage = () => {
     },
     {
       name: "Respiratory Conditions",
-      icon: <Lungs className="h-6 w-6" />,
+      icon: <Activity className="h-6 w-6" />,
       count: 78,
       color: "bg-blue-50 text-blue-700",
       description: "Diseases affecting the lungs and breathing",
@@ -57,7 +57,7 @@ const DiseasesPage = () => {
     },
     {
       name: "Digestive Disorders",
-      icon: <Stomach className="h-6 w-6" />,
+      icon: <Zap className="h-6 w-6" />,
       count: 92,
       color: "bg-yellow-50 text-yellow-700",
       description: "Conditions affecting the digestive system",
