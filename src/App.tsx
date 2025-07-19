@@ -15,6 +15,11 @@ import BMICalculatorPage from "./pages/BMICalculatorPage";
 import SymptomCheckerPage from "./pages/SymptomCheckerPage";
 import DrugInteractionsPage from "./pages/DrugInteractionsPage";
 import NutritionPage from "./pages/NutritionPage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import CalorieCalculatorPage from "./pages/CalorieCalculatorPage";
+import HeartRateCalculatorPage from "./pages/HeartRateCalculatorPage";
+import FirstAidPage from "./pages/FirstAidPage";
 
 const queryClient = new QueryClient();
 
@@ -59,14 +64,14 @@ const App = () => (
           <Route path="/tools/bmi-calculator" element={<BMICalculatorPage />} />
           <Route path="/tools/symptom-checker" element={<SymptomCheckerPage />} />
           <Route path="/tools/drug-interactions" element={<DrugInteractionsPage />} />
-          <Route path="/tools/calorie-calculator" element={<ToolsPage />} />
-          <Route path="/tools/heart-rate-calculator" element={<ToolsPage />} />
+          <Route path="/tools/calorie-calculator" element={<CalorieCalculatorPage />} />
+          <Route path="/tools/heart-rate-calculator" element={<HeartRateCalculatorPage />} />
           <Route path="/tools/dosage-calculator" element={<ToolsPage />} />
           <Route path="/tools/diabetes-risk" element={<ToolsPage />} />
           <Route path="/tools/depression-test" element={<ToolsPage />} />
           <Route path="/tools/heart-health-assessment" element={<ToolsPage />} />
           <Route path="/tools/drug-alternatives" element={<ToolsPage />} />
-          <Route path="/tools/first-aid" element={<ToolsPage />} />
+          <Route path="/tools/first-aid" element={<FirstAidPage />} />
           <Route path="/tools/emergency-contacts" element={<ToolsPage />} />
           
           {/* Health Topics Routes */}
@@ -78,8 +83,8 @@ const App = () => (
           <Route path="/nutrition/:topicId" element={<NutritionPage />} />
           
           {/* About/Contact Routes */}
-          <Route path="/about" element={<NotFound />} />
-          <Route path="/contact" element={<NotFound />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           
           {/* Catch-all route */}
           <Route path="*" element={<NotFound />} />
