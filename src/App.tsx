@@ -20,6 +20,12 @@ import ContactPage from "./pages/ContactPage";
 import CalorieCalculatorPage from "./pages/CalorieCalculatorPage";
 import HeartRateCalculatorPage from "./pages/HeartRateCalculatorPage";
 import FirstAidPage from "./pages/FirstAidPage";
+import DosageCalculatorPage from "./pages/DosageCalculatorPage";
+import DiabetesRiskPage from "./pages/DiabetesRiskPage";
+import DepressionTestPage from "./pages/DepressionTestPage";
+import HeartHealthAssessmentPage from "./pages/HeartHealthAssessmentPage";
+import DrugAlternativesPage from "./pages/DrugAlternativesPage";
+import EmergencyContactsPage from "./pages/EmergencyContactsPage";
 
 const queryClient = new QueryClient();
 
@@ -66,13 +72,13 @@ const App = () => (
           <Route path="/tools/drug-interactions" element={<DrugInteractionsPage />} />
           <Route path="/tools/calorie-calculator" element={<CalorieCalculatorPage />} />
           <Route path="/tools/heart-rate-calculator" element={<HeartRateCalculatorPage />} />
-          <Route path="/tools/dosage-calculator" element={<ToolsPage />} />
-          <Route path="/tools/diabetes-risk" element={<ToolsPage />} />
-          <Route path="/tools/depression-test" element={<ToolsPage />} />
-          <Route path="/tools/heart-health-assessment" element={<ToolsPage />} />
-          <Route path="/tools/drug-alternatives" element={<ToolsPage />} />
+          <Route path="/tools/dosage-calculator" element={<DosageCalculatorPage />} />
+          <Route path="/tools/diabetes-risk" element={<DiabetesRiskPage />} />
+          <Route path="/tools/depression-test" element={<DepressionTestPage />} />
+          <Route path="/tools/heart-health-assessment" element={<HeartHealthAssessmentPage />} />
+          <Route path="/tools/drug-alternatives" element={<DrugAlternativesPage />} />
           <Route path="/tools/first-aid" element={<FirstAidPage />} />
-          <Route path="/tools/emergency-contacts" element={<ToolsPage />} />
+          <Route path="/tools/emergency-contacts" element={<EmergencyContactsPage />} />
           
           {/* Health Topics Routes */}
           <Route path="/topics" element={<ArticlesPage />} />
