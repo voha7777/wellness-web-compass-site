@@ -11,6 +11,12 @@ import MedicationsPage from "./pages/MedicationsPage";
 import ArticlesPage from "./pages/ArticlesPage";
 import ToolsPage from "./pages/ToolsPage";
 import HypertensionPage from "./pages/HypertensionPage";
+import CardiovascularDiseasesPage from "./pages/CardiovascularDiseasesPage";
+import NeurologicalDisordersPage from "./pages/NeurologicalDisordersPage";
+import RespiratoryConditionsPage from "./pages/RespiratoryConditionsPage";
+import InfectiousDiseasesPage from "./pages/InfectiousDiseasesPage";
+import EndocrineDisordersPage from "./pages/EndocrineDisordersPage";
+import DigestiveDisordersPage from "./pages/DigestiveDisordersPage";
 import BMICalculatorPage from "./pages/BMICalculatorPage";
 import SymptomCheckerPage from "./pages/SymptomCheckerPage";
 import DrugInteractionsPage from "./pages/DrugInteractionsPage";
@@ -44,6 +50,12 @@ const App = () => (
           <Route path="/diseases/symptoms" element={<DiseasesPage />} />
           <Route path="/diseases/chronic" element={<DiseasesPage />} />
           <Route path="/diseases/all" element={<DiseasesPage />} />
+          <Route path="/diseases/category/cardiovascular" element={<CardiovascularDiseasesPage />} />
+          <Route path="/diseases/category/neurological" element={<NeurologicalDisordersPage />} />
+          <Route path="/diseases/category/respiratory" element={<RespiratoryConditionsPage />} />
+          <Route path="/diseases/category/infectious" element={<InfectiousDiseasesPage />} />
+          <Route path="/diseases/category/endocrine" element={<EndocrineDisordersPage />} />
+          <Route path="/diseases/category/digestive" element={<DigestiveDisordersPage />} />
           <Route path="/diseases/hypertension" element={<HypertensionPage />} />
           <Route path="/diseases/:diseaseId" element={<HypertensionPage />} />
           
